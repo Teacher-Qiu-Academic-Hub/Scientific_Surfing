@@ -15,7 +15,10 @@ apt-get update && apt-get dist-upgrade -y && apt-get autoremove --purge -y && ap
 ### 或者
 ```bash
 apt-get update
+```
+```bash
 apt-get dist-upgrade -y
+```
 apt-get autoremove --purge -y
 apt-get clean
 ```
