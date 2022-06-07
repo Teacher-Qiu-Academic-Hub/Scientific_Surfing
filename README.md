@@ -19,7 +19,10 @@ apt-get update
 ```bash
 apt-get dist-upgrade -y
 ```
+```bash
 apt-get autoremove --purge -y
+```
+```bash
 apt-get clean
 ```
 ## 新系统一键BBR
@@ -33,21 +36,40 @@ apt-get install ocserv
 ## 申请SSL证书
 ```bash
 apt-get install apache2
+```
+```bash
 apt-get install snapd
+```
+```bash
 snap install core
+```
+```bash
 snap refresh core
+```
+```bash
 apt-get remove certbot
+```
+```bash
 snap install --classic certbot
+```
+```bash
 ln -s /snap/bin/certbot /usr/bin/certbot
+```
+```bash
 certbot --apache
+```
+```bash
 certbot renew --dry-run
+```
+```bash
 certbot certonly
 ```
 ## 改ocserv 443 端口
 ```bash
 systemctl status ocserv.socket
-(Unit ocserv.socket could not be found.)
 ```
+(Unit ocserv.socket could not be found.)
+
 ## 查看系统中哪个端口被占用
 ```bash
 netstat -unltp
@@ -57,7 +79,11 @@ netstat -unltp
 把准备好的文件复制上去
 ```bash
 ocpasswd -c /etc/ocserv/ocpasswd qiuguanglei
+```
+```bash
 ocserv -c /etc/ocserv/ocserv.conf
+```
+```bash
 netstat -tulpn | grep 443
 ```
 ## 打开系统的转发功能
